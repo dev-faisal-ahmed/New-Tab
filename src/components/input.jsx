@@ -7,9 +7,13 @@ export function Input({ name, placeholder, defaultValue, required, title }) {
         name={name}
         id={name}
         defaultValue={defaultValue}
+        autoComplete="false"
         required={required}
       />
-      <label className="mb-2 text-sm text-gray-400 peer-focus:text-blue-300" htmlFor={name}>
+      <label
+        className="mb-2 text-sm text-gray-400 peer-focus:text-blue-300"
+        htmlFor={name}
+      >
         {title}
       </label>
     </div>
