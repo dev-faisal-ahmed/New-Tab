@@ -18,7 +18,7 @@ export function AddLink({ onAddLink }) {
         <p className="mt-3 truncate text-center text-xs text-gray-200">Add</p>
       </div>
       <Modal title="Add Shortcut" state={openModal} onOutsideClick={() => {}}>
-        <LinkForm title="" url="" setModalSate={setOpenModal} onAddLink={onAddLink} />
+        <LinkForm title="" url="" setModalSate={setOpenModal} onAddLink={onAddLink} add={true} />
       </Modal>
     </>
   );

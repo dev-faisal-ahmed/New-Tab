@@ -1,7 +1,7 @@
 export function getLocalLinks() {
   let allLinks = window.localStorage.getItem("links");
   allLinks = JSON.parse(allLinks);
-  return allLinks | [];
+  return allLinks || [];
 }
 
 export function setLocalLinks(links) {

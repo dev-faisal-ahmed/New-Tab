@@ -2,14 +2,19 @@ import { twMerge } from "tailwind-merge";
 import { Input } from "../input";
 import { getFaviconUrl } from "../../utils/helper";
 
-export function LinkForm({ onAddLink, setModalSate, title, url }) {
+export function LinkForm({ onAddLink, setModalSate, title, url, add, update, onUpdateLink }) {
   const handleAddLink = (e) => {
     e.preventDefault();
     const target = e.target;
-    const title = target.title.value;
-    const url = target.url.value;
-    const favIconUrl = getFaviconUrl(url);
-    onAddLink({ title, url, favIconUrl });
+    const newTitle = target.title.value;
+    const newUrl = target.url.value;
+    const favIconUrl = getFaviconUrl(newUrl);
+
+    if (add) {
+      onAddLink({ title: newTitle, url: newUrl, favIconUrl });
+    } else if (update) {
+      onUpdateLink({ title: newTitle, url: newUrl, favIconUrl }, { title, url });
+    }
     setModalSate(false);
   };
 
@@ -39,7 +44,10 @@ export function LinkForm({ onAddLink, setModalSate, title, url }) {
           Cancel
         </p>
 
-        <button className={twMerge(`button bg-blue-400`)}>Add</button>
+        <button className={twMerge(`button bg-blue-400`)}>
+          {add && "Add"}
+          {update && "Edit"}
+        </button>
       </div>
     </form>
   );
