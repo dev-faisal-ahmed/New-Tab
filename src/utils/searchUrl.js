@@ -1,1 +1,1 @@
-export const searchUrl = "https://duckduckgo.com/?q=";
+export const searchUrl = "https://searchuix.onrender.com/search?q=";
