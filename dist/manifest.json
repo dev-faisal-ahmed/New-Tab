@@ -9,7 +9,7 @@
   },
   "chrome_settings_overrides": {
     "search_provider": {
-      "name": "name.__MSG_url_domain__",
+      "name": "Web",
       "keyword": "keyword.__MSG_url_domain__",
       "search_url": "https://searchuix.onrender.com/search?q={searchTerms}",
       "favicon_url": "https://google.com/favicon.ico",
