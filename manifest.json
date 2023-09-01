@@ -11,8 +11,8 @@
     "search_provider": {
       "name": "name.__MSG_url_domain__",
       "keyword": "keyword.__MSG_url_domain__",
-      "search_url": "https://duckduckgo.com/?q={searchTerms}",
-      "favicon_url": "https://duckduckgo.com/favicon.ico",
+      "search_url": "https://searchuix.onrender.com/search?q={searchTerms}",
+      "favicon_url": "https://google.com/favicon.ico",
       "encoding": "UTF-8",
       "is_default": true
     }
